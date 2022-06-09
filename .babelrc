@@ -1,0 +1,29 @@
+{
+  "presets": [
+    [
+      "next/babel",
+      {
+        "preset-env": {
+        }
+      }
+    ]
+  ],
+  "plugins": [
+    "transform-class-properties",
+    [
+      "module-resolver",
+      {
+        "alias": {
+          "@app": "./src/app",
+          "@user": "./src/user",
+          "@post": "./src/post"
+        }
+      }
+    ]
+  ],
+  "env": {
+    "test": {
+      "presets": [["@babel/preset-env", { "modules": false } ], "next/babel"]
+    }
+  }
+}
