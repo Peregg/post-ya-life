@@ -4,7 +4,7 @@ import { Document } from 'mongoose';
 export interface IPostBody {
   title: string;
   body: string;
-  author: string;
+  author: IUser;
 }
 
 export interface IPost extends IPostBody {
